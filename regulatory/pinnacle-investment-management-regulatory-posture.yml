@@ -1,0 +1,73 @@
+generated: '2026-10-22'
+method: searched
+source: https://pinnacleinvestment.com/privacy-policy/
+notes: >-
+  Read from the provider's own Privacy Policy (HTTP 200) and Disclaimer (HTTP 200, no regulatory-posture
+  signals). The dossier carried no legal_pages; both pages came from its site_links. Only signals the
+  Privacy Policy speaks to are recorded. It says nothing on AI, incident notification, GPC, accessibility,
+  transparency reports or similar.
+signals:
+  data_subject_request:
+    url: https://pinnacleinvestment.com/privacy-policy/
+    section: 'YOUR RIGHTS / EXERCISING YOUR RIGHTS'
+    channel: Privacy Officer, Risk.Compliance@pinnacleinvestment.com
+    stated_sla: 'we will generally respond within 30 days'
+    rights_named: [access, objection, correction, erasure, restriction, portability, automated decision making (manual intervention)]
+    escalation: a data protection or other competent authority with jurisdiction
+    evidence:
+    - source: https://pinnacleinvestment.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: 'Portability: the right to have personal information produced in a commonly used electronic format;'
+    - source: https://pinnacleinvestment.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: 'You may contact us at any time to exercise your rights by using the contact details provided below and we will generally respond within 30 days.'
+    - source: https://pinnacleinvestment.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: 'Erasure: the right to request your personal information be erased where we do not have a legal or regulatory obligation or other valid reason to continue to process it;'
+    note: >-
+      Lists a set of GDPR-style data-subject rights and a general 30-day response window. It reserves the
+      right to refuse requests or to charge a fee "to the extent permitted by applicable law", and identity
+      is verified before a request is acted on.
+  data_residency:
+    url: https://pinnacleinvestment.com/privacy-policy/
+    evidence:
+    - source: https://pinnacleinvestment.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: 'All personal information collected is held on our cloud storage, on servers located in Australia. We retain effective control over any personal information held on our cloud, and the information is handled in accordance with the Australian Privacy Principles.'
+    - source: https://pinnacleinvestment.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: 'We may disclose your personal information to our related bodies corporate and external services providers located in countries outside of where you reside or where services are provided to you.'
+    note: >-
+      Says where data is stored (Australian servers) but also allows disclosure to overseas related entities
+      and providers. The countries are not named. This covers the firm's investor and website data. It is
+      not an API data-residency commitment.
+  data_retention:
+    url: https://pinnacleinvestment.com/privacy-policy/
+    section: 'HOW LONG DO WE KEEP YOUR PERSONAL INFORMATION?'
+    evidence:
+    - source: https://pinnacleinvestment.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: 'We aim to keep your personal information for only as long as we need it, following which we will take such steps as are reasonable in the circumstances to de-identify or destroy the information.'
+    note: Retention depends on business need and legal requirements. No fixed retention period is stated.
+  subprocessors:
+    url: https://pinnacleinvestment.com/privacy-policy/
+    section: 'WHO DO WE SHARE YOUR PERSONAL INFORMATION WITH?'
+    named_vendors: [Salesforce Account Engagement (mailing lists)]
+    evidence:
+    - source: https://pinnacleinvestment.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: 'external service providers (such as registries, administrators, auditors, and providers that host our website servers, manage our IT and our manage human resources information);'
+    - source: https://pinnacleinvestment.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: 'We use Salesforce Account Engagement to manage our mailing lists.'
+    note: >-
+      Names only categories of recipients (the list is "not limited to" them) plus a single named vendor.
+      There is no published subprocessor list.

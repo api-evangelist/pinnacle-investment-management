@@ -1,23 +1,98 @@
 aid: pinnacle-investment-management
+
 name: Pinnacle Investment Management
-description: 'Pinnacle Investment Management is a company surfaced via the API Evangelist harvest backlog
-  (source: australia-apidays-2026) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Pinnacle Investment Management Group Limited (ASX: PNI) is an Australian-headquartered global multi-affiliate investment management firm that provides distribution, infrastructure and capital
+  to leading boutique asset managers. Its site reports 19 affiliate fund managers and $229.4 billion in funds under management (at 100% of affiliate FUM, 30 June 2026), with funds, exchange-listed products
+  and managed accounts offered across Australia/New Zealand, the UK/Europe, the USA and Canada. No public developer API is advertised on its website.'
+
 url: https://raw.githubusercontent.com/api-evangelist/pinnacle-investment-management/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:australia-apidays-2026
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-22'
+
 modified: '2026-10-22'
+
 tags:
 - Company
-apis: []
+- Investment Management
+- Asset Management
+- Financial Services
+- Funds Management
+- Australia
+- ASX Listed
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
+image: https://pinnacleinvestment.com/wp-content/uploads/2021/02/Pinnacle_Main_Logo_DarkBlue@4x.webp
+
 common:
+- type: LLMsTxt
+  url: llms/pinnacle-investment-management-llms.txt
+- type: Hosts
+  url: hosts/pinnacle-investment-management-hosts.yml
+- type: Vendors
+  url: vendors/pinnacle-investment-management-vendors.yml
+- type: DomainSecurity
+  url: security/pinnacle-investment-management-domain-security.yml
 - type: Website
   url: https://pinnacleinvestment.com/
+- type: About
+  url: https://pinnacleinvestment.com/about/
+- type: Blog
+  url: https://pinnacleinvestment.com/eu/news
+- type: Support
+  url: https://pinnacleinvestment.com/contact-us/
+- type: Login
+  url: https://pinnacleinvestment.com/login/
+- type: PrivacyPolicy
+  url: https://pinnacleinvestment.com/privacy-policy/
+- type: Disclaimer
+  url: https://pinnacleinvestment.com/disclaimer/
+- type: InvestorRelations
+  url: https://pinnacleinvestment.com/shareholders/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/pinnacle-investment-management/
+
+apis: []
+
+x-coverage:
+  state: covered
+  reason: identity-verified
+  detail: Website pinnacleinvestment.com names "Pinnacle Investment Management Group Limited" (homepage notice) and describes a global multi-affiliate investment management firm; no developer portal, API
+    docs or pricing found on the site. Login pointer taken from the pre-flight site_links (200), not fetched in this pass.
+  evidence:
+  - url: https://pinnacleinvestment.com/
+    status: 200
+  - url: https://pinnacleinvestment.com/about/
+    status: 200
+  - url: https://pinnacleinvestment.com/contact-us/
+    status: 200
+  - url: https://pinnacleinvestment.com/eu/news
+    status: 200
+  - url: https://pinnacleinvestment.com/privacy-policy/
+    status: 200
+  - url: https://pinnacleinvestment.com/disclaimer/
+    status: 200
+  - url: https://pinnacleinvestment.com/shareholders/
+    status: 200
+  - url: https://www.linkedin.com/company/pinnacle-investment-management/
+    status: 200
+x-enrichment:
+  date: '2026-10-22'
+  status: enriched
+  artifacts_added: 11
+  pass: modular-v1
+  engine: identity=anthropic,contract=anthropic,surfaces=anthropic,docs=anthropic,regulatory=anthropic

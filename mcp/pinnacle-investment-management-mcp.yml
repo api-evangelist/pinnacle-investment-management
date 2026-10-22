@@ -1,0 +1,18 @@
+name: Pinnacle Investment Management MCP Server
+type: MCPServer
+generated: '2026-10-22'
+method: none
+status: none
+description: >-
+  No official MCP server (hosted or local) was found for Pinnacle Investment Management. A web search for
+  the company name with MCP/API returned only unrelated directory entries, https://pinnacleinvestment.com/.well-known/mcp.json
+  returned 404, and the site's own llms.txt advertises no MCP or developer API. No OpenAPI contract is held
+  in this repo, so no candidate tool list could be derived.
+source:
+- https://pinnacleinvestment.com/.well-known/mcp.json (HTTP 404, 2026-10-22)
+- https://pinnacleinvestment.com/llms.txt (HTTP 200, 2026-10-22; no MCP/API references)
+deployment:
+  mode: none
+  auth: unknown
+  verified: searched
+tools: []
